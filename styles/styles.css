@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding: 0;
+    size: auto;
+  }
+
+  body{
+    background-color: #faebd7;
+    background-size: 100% 100%;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #060606;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #000000;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.homeCircle {
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+  background: #faebd7;
+  outline-style: solid;
+  outline-color: black;
+  margin-bottom: 10px;
+}
+
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000; 
+  padding: 10px 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255); 
+  margin: 0 150px; 
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav .home {
+  font-weight: bold;
+}
+
+.theme-label-light {
+  color: white;
+  margin-right: 10px; 
+}
+
+.theme-label-dark {
+  color: white;
+  margin-left: 66px;
+}
+
+#imageHome {
+  display: flex;
+  align-items: flex-start;
+  justify-content: row;
+  margin-top: 10px;
+}
+
+#imageHome img {
+  max-width: 550px; 
+  margin-right: 20px;
+}
+
+#homeName {
+  color: #111111; 
+  font-size: 100px; 
+}
+
+#homeGreeting {
+  color: #111111; 
+  margin-bottom: 10px;
+}
+
+#homeGreeting2 {
+  color: #111111; 
+  margin-bottom: 40px;
+}
+
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialSection {
+  display: flex;
+  flex-direction: row;
+}
+
+#homeContact {
+  margin-bottom: 5px;
+}
+
+#homeContact2 {
+  margin-bottom: 40px;
+}
+
+
+/* CIRCLE DESIGN FOR HOMEPAGE STARTS HERE */
+.circles-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #000000; 
+  opacity: 0.3; 
+}
+
+.circle1 {
+  width: 70px;
+  height: 70px;
+  bottom: -3%;
+  left: 5%;
+  background-color:  #075da8;
+}
+
+.circle2 {
+  width: 10px; 
+  height: 10px;
+  bottom: 7%;
+  left: 2%;
+}
+
+.circle3 {
+  width: 200px; 
+  height: 200px;
+  bottom: 10%;
+  left: 15%;
+}
+
+.circle4 {
+  width: 60px; 
+  height: 60px;
+  bottom: 8%;
+  left: 10%;
+}
+
+.circle5 {
+  width: 300px;
+  height: 300px;
+  bottom: 50%;
+  left: 50%;
+}
