@@ -2,14 +2,15 @@
     margin:0;
     padding: 0;
     size: auto;
-  }
-
-  body{
-    background-color: #faebd7;
-    background-size: 100% 100%;
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
+}
+  
+body{
+  background-color: #41B3A3;
+  background-size: 100% 100%;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  overflow-y: auto;
 }
 
 .switch {
@@ -71,18 +72,11 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.homeCircle {
-  width: 150px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 15px;
-  font-size: 20px;
-  color: #000000;
-  text-align: center;
-  background: #faebd7;
-  outline-style: solid;
-  outline-color: black;
+.homeContactHeader {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 10px;
+  font-size: 20;
 }
 
 body, h1, h2, p, ul, li {
@@ -90,22 +84,19 @@ body, h1, h2, p, ul, li {
   padding: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-}
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  background-color: #000000; 
+  background-color: #bc8865eb; 
   padding: 10px 20px;
 }
 
 nav a {
   text-decoration: none;
   color: rgb(255, 255, 255); 
-  margin: 0 150px; 
+  margin: 0 20px; 
 }
 
 nav a:hover {
@@ -123,7 +114,8 @@ nav .home {
 
 .theme-label-dark {
   color: white;
-  margin-left: 66px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #imageHome {
@@ -141,23 +133,31 @@ nav .home {
 #homeName {
   color: #111111; 
   font-size: 100px; 
+  margin-bottom: 30px;
 }
 
-#homeGreeting {
+#aboutMe {
   color: #111111; 
   margin-bottom: 10px;
-}
-
-#homeGreeting2 {
-  color: #111111; 
-  margin-bottom: 40px;
 }
 
 
 .textSection {
   display: flex;
   flex-direction: column;
+  background-color: #7dc2ad;
+  font-family: 'Work Sans', sans-serif;
+  font-size: large;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 60%;
+  margin-right: auto;
+  margin-left: 20px;
+  line-height: 1.5;
+  overflow-y: auto; /* Add vertical scrolling */
+  max-height: calc(100vh - 50px);
 }
+
 
 .socialSection {
   display: flex;
@@ -166,12 +166,59 @@ nav .home {
 
 #homeContact {
   margin-bottom: 5px;
+  font-family: 'Work Sans', sans-serif;
 }
 
 #homeContact2 {
   margin-bottom: 40px;
+  font-family: 'Work Sans', sans-serif;
 }
 
+#selfimage {
+  width: 24%;
+  height: auto ;
+  margin-left: 5px;
+}
+
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  background-color: #29667290; 
+  padding: 20px; 
+  display: flex;
+  justify-content: center;
+  color: white; 
+  z-index: 2
+}
+
+.contacts, .socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socials {
+  margin-left: 50px;
+}
+
+nav .home.active {
+  text-decoration: none; /* Remove default underline */
+  position: relative;
+}
+
+nav .home.active::before {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px; /* Adjust as needed */
+  background-color: #ffffff; /* Set the color of the box */
+}
 
 /* CIRCLE DESIGN FOR HOMEPAGE STARTS HERE */
 .circles-container {
@@ -192,25 +239,29 @@ nav .home {
 }
 
 .circle1 {
-  width: 70px;
-  height: 70px;
-  bottom: -3%;
-  left: 5%;
-  background-color:  #075da8;
+  width: 800px;
+  height: 800px;
+  bottom: -5%;
+  left: 50%;
+  background-color:  #85CDCA;
 }
 
 .circle2 {
-  width: 10px; 
-  height: 10px;
-  bottom: 7%;
-  left: 2%;
+  width: 1000px; 
+  height: 1000px;
+  bottom: 20%;
+  left: 70%;
+  background-color: transparent;
+  border: 20px solid white;
+  border-radius: 50%;
 }
 
 .circle3 {
   width: 200px; 
   height: 200px;
-  bottom: 10%;
-  left: 15%;
+  bottom: 13%;
+  left: 17%;
+  background-color: #85CDCA;
 }
 
 .circle4 {
@@ -218,11 +269,32 @@ nav .home {
   height: 60px;
   bottom: 8%;
   left: 10%;
+  background-color: #E27D60;
 }
 
 .circle5 {
-  width: 300px;
-  height: 300px;
-  bottom: 50%;
-  left: 50%;
+  width: 500; 
+  height: 500px;
+  bottom: 75%;
+  left: 10%;
+  background-color: #e0390a;
+}
+
+.circle6 {
+  width: 100px; 
+  height: 100px;
+  bottom: 80%;
+  left: 95%;
+  background-color: #C38D9E;
+}
+
+.circle7 {
+  width: 250px; 
+  height: 250px;
+  bottom: 20%;
+  left: -5%;
+  background-color: transparent;
+  border: 20px solid white;
+  border-radius: 50%;
+  background-color: #C38D9E;
 }

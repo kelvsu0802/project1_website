@@ -1,13 +1,17 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&family=Work+Sans&display=swap" rel="stylesheet">
+    
 <link id = "mainStyleSheet" rel = "stylesheet" href="styles/styles.css">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Kelvin Su's Website</title>
 </head>
 <body>
 
@@ -19,7 +23,7 @@
       </label>
     <div class="theme-label-dark">Dark</div>
 
-    <a href="#" class="home">Home</a>
+    <a href="#" class="home active">Home</a>
     <a href="#" class="portfolio">Portfolio</a>
     <a href="#" class="qualifications">Qualifications</a>
     <a href="#" class="service">Service</a>
@@ -27,45 +31,29 @@
 </nav>
 
 <div id = "imageHome">
-    <img src = "images/self.jpg" alt = "image not found" 
-         width = "400"
-         height = "550" >
+    <img id = "selfImage" src = "images/self.jpg" alt = "image not found" >
 
     <div class="textSection">
         <h1 id="homeName">Kelvin Su</h1>
-        <p id = "homeGreeting"> Howdy! I am an undergrad computer engineer student at Texas A&M University</p>
-        <p id = "homeGreeting2">I like to approach the world with an engineering design process, where possibilities are endless!</p>
-
-        <div class="homeCircle">Contacts</div>
-        <p id = "homeContact">Email: sukelv0802@tamu.edu</p>
-        <p id = "homeContact2">Phone: (469) 975-6418</p>
-
-        <div class="homeCircle">Socials</div>
-        <div class = "socialsSection">
-            <a href="https://www.instagram.com/kelvinsu_mic_jonathan_xu/?hl=en">
-                <img src="images\iglogo.png"
-                     width = "70"
-                     height = "70" ></a>
-
-            <a href="https://www.facebook.com/LUKADONCICKING">
-                <img src="images\fblogo.png"
-                     width = "70"
-                     height = "70" ></a>
-
-            <a href="https://www.linkedin.com/in/kelvin-su-a7868824b/">
-                <img src="images\lilogo.png"
-                     width = "70"
-                     height = "70" ></a>
-
-            <a href="https://github.com/kelvsu0802">
-                <img src="images\ghlogo.png"
-                     width = "70"
-                     height = "70" ></a>
-
-            <a href="https://twitter.com/wehofhewooa">
-                <img src="images\twitterlogo.png"
-                     width = "70"
-                     height = "70" ></a>
+        <h1 id = "aboutMe">About Me:</h1>
+        <p>Howdy! My name is Kelvin Su, a junior in Computer Engineering at Texas A&M University-College Station. My journey in the realm
+            of computer engineering began with admiring my parents. My dad was an electrical engineer, and my mom was in Computer
+            Science, and as a result I've always been intrigued by the intersection of hardware and software. I always aim to gain
+            some understanding of the intricacies that make our digital world work seamlessly. Being a student at Texas A&M, I've
+            been able to engage in a curriculum that hones my technical skills, but also fosters a collaborative mindset. From simply
+            learning the basics to designing circuits, I've found every challenge a fun opportunity to learn and grow. I try to stay
+            updated on the latest advancements in the computer engineering to stay updated in the ever-changing field of computer 
+            engineering. Predictably, my hobbies involves dabbling in electronics. Whether it be experimenting with microcontrollers, soldering
+            components together, or simply learning a new skill in the realm of electronics, I find the joy in the hands-on exploration.
+            It also doubles as a good learning experience for my classes in university. More recently, I've been interested in teaching
+            myself C and utilizing that with an Arduino, building small-scale fun projects. I take a online course unrelated to my 
+            university, and I've found it quite fun. It helps that because my university teaches C++ at a high level, the transition to 
+            C hasn't been too difficult. My hopes in this is that I will develop a stronger understanding of microcontrollers, and can 
+            move onto more professional/advanced microcontrollers so that I can create bigger projects.</p>
+        <p>Outside of school, I enjoy playing ping-pong, going on walks, trying out new restaurants (especially small family ran ones!), 
+            and am an avid gamer. In fact, I specifically built my keyboard, and plan on learning a little bit of woodworking so I 
+            can make myself a desk, all to create for myself my ideal setup to game on. If anyone reading this also enjoys to game, 
+            I'd love to play, please contact me using the information below! Anyways, that's it from me, please feel free to look around! </p>
         </div>
     </div>
 </div>
@@ -76,7 +64,46 @@
     <div class="circle circle3"></div>
     <div class="circle circle4"></div>
     <div class="circle circle5"></div>
-    <!-- add more circles later for backgorund design-->
+    <div class="circle circle6"></div>
+    <div class="circle circle7"></div>
+</div>
+
+<div class="bottomBar">
+    <div class="contacts">
+        <div class="homeContactHeader">Contacts</div>
+        <p id="homeContact">Email: sukelv0802@tamu.edu</p>
+        <p id="homeContact2">Phone: (469) 975-6418</p>
+    </div>
+        
+    <div class="socials">
+        <div class="homeContactHeader">Socials</div>
+        <div class="socialsSection">
+            <a href="https://www.instagram.com/kelvinsu_mic_jonathan_xu/?hl=en">
+                <img src="images\iglogo.png"
+                     width = "20"
+                     height = "20" ></a>
+            
+            <a href="https://www.facebook.com/LUKADONCICKING">
+                <img src="images\fblogo.png"
+                     width = "20"
+                     height = "20" ></a>
+            
+            <a href="https://www.linkedin.com/in/kelvin-su-a7868824b/">
+                <img src="images\lilogo.png"
+                     width = "20"
+                     height = "20" ></a>
+            
+            <a href="https://github.com/kelvsu0802">
+                <img src="images\ghlogo.png"
+                     width = "20"
+                     height = "20" ></a>
+            
+            <a href="https://twitter.com/wehofhewooa">
+                <img src="images\twitterlogo.png"
+                     width = "20"
+                     height = "20" ></a>
+        </div>
+    </div>
 </div>
 
 </body>
