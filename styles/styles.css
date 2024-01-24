@@ -1,16 +1,16 @@
 *{
-    margin:0;
-    padding: 0;
-    size: auto;
+  margin:0;
+  padding: 0;
+  size: auto;
 }
-  
+
 body{
   background-color: #41B3A3;
   background-size: 100% 100%;
   margin: 0;
-  height: 100vh;
   font-family: 'Roboto', sans-serif;
   overflow-y: auto;
+  height: 100vh
 }
 
 .switch {
@@ -86,10 +86,14 @@ body, h1, h2, p, ul, li {
 
 
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #bc8865eb; 
+  background-color: #bc8865eb;
   padding: 10px 20px;
 }
 
@@ -103,9 +107,23 @@ nav a:hover {
   text-decoration: underline;
 }
 
-nav .home {
-  font-weight: bold;
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
 }
+
+nav a:hover::before,
+nav a.active::before {
+  width: 100%;
+}
+
 
 .theme-label-light {
   color: white;
@@ -122,7 +140,7 @@ nav .home {
   display: flex;
   align-items: flex-start;
   justify-content: row;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #imageHome img {
@@ -144,6 +162,7 @@ nav .home {
 
 .textSection {
   display: flex;
+  margin-top: 70px;
   flex-direction: column;
   background-color: #7dc2ad;
   font-family: 'Work Sans', sans-serif;
@@ -152,10 +171,9 @@ nav .home {
   border-radius: 10px;
   max-width: 60%;
   margin-right: auto;
+  margin-bottom: 60px;
   margin-left: 20px;
   line-height: 1.5;
-  overflow-y: auto;
-  max-height: calc(100vh - 50px);
 }
 
 
@@ -178,19 +196,21 @@ nav .home {
   width: 24%;
   height: auto ;
   margin-left: 5px;
+  margin-top: 60px;
 }
 
 .bottomBar {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100%;  
   height: 7%;
   background-color: #29667290; 
   padding: 20px; 
   display: flex;
   justify-content: center;
   color: white; 
+  margin-top: 20px;
   z-index: 2
 }
 
@@ -201,12 +221,13 @@ nav .home {
 }
 
 .socials {
-  margin-left: 50px;
+  margin-left: 25px;
 }
 
 nav .home.active {
   text-decoration: none;
   position: relative;
+  font-weight: bold;
 }
 
 nav .home.active::before {
@@ -221,7 +242,7 @@ nav .home.active::before {
 }
 
 /* CIRCLE DESIGN FOR HOMEPAGE STARTS HERE */
-.circles-container {
+.circlesContainer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -297,4 +318,232 @@ nav .home.active::before {
   border: 20px solid white;
   border-radius: 50%;
   background-color: #C38D9E;
+}
+
+:root {
+  --random-1: 0.7;
+  --random-2: 0.4;
+  --random-3: 0.9;
+  --random-4: 0.2;
+  --random-5: 0.6;
+  --random-6: 0.8;
+  --random-7: 0.3;
+}
+
+@keyframes circleAnimation {
+0% {
+  transform: translateY(-200px) translateX(0);
+  opacity: 0;
+}
+100% {
+  transform: translateY(0) translateX(calc((var(--random-x) - 0.5) * 2 * 100px));
+  opacity: 0.3;
+}
+}
+
+@keyframes circleAnimationReverse {
+0% {
+  transform: translateY(100vh) translateX(0);
+  opacity: 0;
+}
+100% {
+  transform: translateY(0) translateX(calc((var(--random-x) - 0.5) * -2 * 100px));
+  opacity: 0.3;
+}
+}
+.circle:nth-child(1),
+.circle:nth-child(2),
+.circle:nth-child(3) {
+--random-x: calc(var(--random-1));
+animation: circleAnimation 1.5s ease-in-out forwards;
+}
+
+.circle:nth-child(4),
+.circle:nth-child(5),
+.circle:nth-child(6),
+.circle:nth-child(7) {
+--random-x: calc(var(--random-4));
+animation: circleAnimationReverse 1s ease-in-out forwards;
+}
+
+
+/* PORTFOLIO PAGE STARTS HERE!!!!!! */
+nav .portfolio.active {
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+}
+
+nav .portfolio.active::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+#headerTitle {
+  font-size: 90;
+}
+
+.headerWrapper {
+  padding: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fallIn 0.5s ease-in-out forwards;
+}
+
+.headerBox {
+  position: relative;
+  margin-top: 70px;
+  padding: 10px;
+  background-color: #7ccac6;
+  font-family: 'Work Sans', sans-serif;
+  font-size: large;
+  border-radius: 10px;
+  margin-left: 34px;
+  line-height: 1.5;
+  overflow: hidden;
+}
+
+header {
+  margin: 0;
+}
+
+.portfolioSection {
+  display: flex;
+  background-color: #7dc2ad;
+  font-family: 'Work Sans', sans-serif;
+  font-size: large;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 1.5;
+  margin: 20px auto;
+  position: center;
+  max-width: 90%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fallIn 0.5s ease-in-out forwards 0.15s;
+  z-index: 3;
+}
+
+.portfolioContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#portfolioImage, #portfolioImage2 {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 20px; 
+  margin-right: 40px;
+}
+
+.videoContainer {
+  margin-right: 40px;
+}
+
+@keyframes fallIn {
+0% {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+.staticcirclesContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.staticcircle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #000000; 
+  opacity: 0.3; 
+}
+
+.circle1 {
+  width: 800px;
+  height: 800px;
+  bottom: -5%;
+  left: 50%;
+  background-color:  #85CDCA;
+}
+
+.circle2 {
+  width: 1000px; 
+  height: 1000px;
+  bottom: 20%;
+  left: 70%;
+  background-color: transparent;
+  border: 20px solid white;
+  border-radius: 50%;
+}
+
+.circle3 {
+  width: 200px; 
+  height: 200px;
+  bottom: 13%;
+  left: 17%;
+  background-color: #85CDCA;
+}
+
+.circle4 {
+  width: 60px; 
+  height: 60px;
+  bottom: 8%;
+  left: 10%;
+  background-color: #E27D60;
+}
+
+.circle5 {
+  width: 500; 
+  height: 500px;
+  bottom: 75%;
+  left: 10%;
+  background-color: #e0390a;
+}
+
+.circle6 {
+  width: 100px; 
+  height: 100px;
+  bottom: 80%;
+  left: 95%;
+  background-color: #C38D9E;
+}
+
+.circle7 {
+  width: 250px; 
+  height: 250px;
+  bottom: 20%;
+  left: -5%;
+  background-color: transparent;
+  border: 20px solid white;
+  border-radius: 50%;
+  background-color: #C38D9E;
+}
+
+
+/* QUALIFICATION PAGE STARTS HERE!!!!!! */
+nav .qualifications.active {
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
 }
